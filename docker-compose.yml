@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: orchestrator-postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=orchestrator
+    ports:
+      - "5432:5432"
+    volumes:
+      - orchestrator-pg-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # Uncomment to run the API in Docker too (otherwise run it locally with `make run`
+  # against this Postgres container while you develop).
+  # api:
+  #   build: .
+  #   env_file: .env
+  #   ports:
+  #     - "8000:8000"
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
+
+volumes:
+  orchestrator-pg-data:

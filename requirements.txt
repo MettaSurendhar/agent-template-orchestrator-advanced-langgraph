@@ -1,0 +1,19 @@
+fastapi>=0.116.0
+uvicorn[standard]>=0.35.0
+python-dotenv>=1.1.0
+pydantic[email]>=2.11.0
+pyjwt[crypto]>=2.9.0
+
+# Orchestration
+langgraph>=1.2.0
+langgraph-checkpoint-postgres>=2.0.0
+psycopg[binary,pool]>=3.2.0
+
+# LLM generation
+boto3>=1.40.0
+openai>=1.40.0
+
+# Dev/test
+pytest>=8.0.0
+pytest-asyncio>=0.24.0
+httpx>=0.27.0
