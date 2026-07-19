@@ -15,7 +15,7 @@ This is one of two advanced-tier options in the Multi-Agent Orchestrator Templat
 | POC | You're prototyping the agent flow itself. In-memory state, minutes to first run. | [agent-template-orchestrator-poc](https://github.com/MettaSurendhar/agent-template-orchestrator-poc) |
 | Intermediate | You have real users who need their runs isolated from each other, and runs need to survive a restart. | [agent-template-orchestrator-intermediate](https://github.com/MettaSurendhar/agent-template-orchestrator-intermediate) |
 | **Advanced — LangGraph (this repo)** | You're deploying for a real organization and want to build on LangGraph. | — |
-| Advanced — AWS Strands | Same production feature set as this repo, built on AWS Strands Agents SDK instead. Pick based on which framework fits your team/stack. | *(pick tier — coming soon)* |
+| Advanced — AWS Strands | Same production feature set as this repo, built on AWS Strands Agents SDK instead. Pick based on which framework fits your team/stack. | [agent-template-orchestrator-advanced-strands](https://github.com/MettaSurendhar/agent-template-orchestrator-advanced-strands) |
 
 The two advanced tiers are **feature-equivalent by design** — Postgres durability, SSO, team isolation, review queue, all the same. The choice between them is a framework preference, not a capability tradeoff.
 
